@@ -53,6 +53,7 @@ def main_loop():
         with open(file_name, "w") as f:
             current_ident : int = 0
             for line in text:
+                line = line.replace('\t',IDENT*' ')
                 new_line : str = ''
                 split_semicolon : list[str] = line.split(sep=';')
                 if ';' in line:
